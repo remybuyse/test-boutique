@@ -5,8 +5,8 @@
         <title>Boutique O'Clock</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:200,400,600" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     </head>
 

@@ -25,15 +25,15 @@ header a{
 
 /* PRODUCT-LIST */
 
-main{
-	width: 80%;
-	margin: 0 auto;
+#products {
+	max-width: 85%;
+	margin: 5em auto;
+	overflow: hidden;
 }
-
 
 .product p, main p{
 	font-size: 1.2em;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Playfair Display',;
 	width: 300px;
 }
 
@@ -45,6 +45,51 @@ main{
 	font-size: 1.1em;
 	float: left;
 	position: relative;
+}
+
+.image_overlay:hover .title{
+	opacity: 1;
+}
+
+.title{
+	position: absolute;
+	top: 110px;
+	left: 60px;
+	width: 300px;
+	height: 300px;
+	padding: 80px 20px;
+
+	/* Display */
+	background: rgba(230, 245, 255, 0.9);
+	opacity: 0;
+	transition: .4s;
+
+	/* Text */
+	color: #000;
+	font-weight: 600;
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.8em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.product img{
+	text-align: center;
+	width: 300px;
+	margin: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.product img + span{
+	visibility: hidden;
+}
+.product img:hover{
+	opacity: 0.35;
+}
+
+.product img:hover + span{
+	visibility: visible;
 }
 
 .prices{
@@ -64,6 +109,8 @@ main{
 
 .more{
 	color: #555;
+	font-family: 'Playfair Display';
+	font-weight: 400;
 }
 .view-product{
 	text-align: center;
@@ -71,63 +118,36 @@ main{
 	margin-top: -20px;
 	text-transform: uppercase;
 }
-.product img{
-	text-align: center;
-	width: 300px;
-	margin: 10px;
-	padding-bottom: 20px;
-	position: relative;
-}
-.product img + span{
-	visibility: hidden;
-}
-.product img:hover{
-	opacity: 0.35;
+
+
+.view-product:hover .fa {
+	color: rgb(100, 230, 240);
 }
 
-.product img:hover + span{
-	visibility: visible;
-}
 
-.title{
-
-	color: black;
-	font-size: 2.5em;
-	font-weight: bold;
-	font-family: 'Indie Flower', cursive;
-	width: 300px;
-	height: 100px;
-	line-height: 1;
-	font-size: 2em;
-	font-weight: bold;
-	display: inline-block;
-	position: absolute;
-	top: 230px;
-	text-align: center;
-}
 
 button
 {
     display: block;
     width: 200px;
     height: 50px;
-    background-color: #02b8dd;
+    background: rgb(90, 215, 245);
     color: #fff;
     font-size: 16px;
     line-height: 50px;
     text-align: center;
 	text-transform: uppercase;
-	font-weight: bold;
-	font-family: 'Playfair Display', serif;
-	margin: 0 auto;
+	font-weight: 600;
+	font-family: 'Playfair Display',;
+	margin: .5em auto;
 	border: none;
-
+	cursor: pointer;
 }
 
 button:hover
 {
     color: #fff;
-    background-color: #02b8dd;
+	background: rgb(100, 230, 240);
 }
 
 /* PRODUCT.PHP */
@@ -187,15 +207,9 @@ button:hover
 
 footer{
 	text-align: center;
-	padding: 20px;
+	padding: 1em 0;
 	font-family: 'Indie Flower', cursive;
 	background-color: rgb(230, 245, 255);
-	bottom: 100%;
-	bottom:0;
-	position: absolute;
 	margin-top: 100px;
-}
-
-.image_overlay{
-
+	bottom: 0;
 }
